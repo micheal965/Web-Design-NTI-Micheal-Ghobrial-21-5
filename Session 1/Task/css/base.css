@@ -1,0 +1,51 @@
+
+hr {
+    background-color: blue;
+    height: 5px;
+}
+
+img {
+    width: 50%;
+}
+
+table {
+    width: 600px;
+    border: 1px solid black;
+}
+table thead {
+    background-color: aquamarine;
+    border: none;
+}
+table tbody {
+    background-color: aqua;
+}
+.bigger-cell {
+    padding:1px 0;
+}
+
+
+.container {
+    background-color:rgb(150, 44, 212);
+    width: 1000px;
+}
+
+.container .container-body {
+    display: grid;
+    grid-template-columns: repeat(2,500px);
+    padding: 100px;
+}
+
+
+.container .container-body .left {
+    background-color: rgb(102, 226, 243);
+    height: 600px;
+}
+.container .container-body .left h1 {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.container .container-body .left p {
+    color: #777;
+    line-height: 1.6;
+}
