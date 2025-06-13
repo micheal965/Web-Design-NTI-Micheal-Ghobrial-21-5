@@ -1,0 +1,200 @@
+        //public async Task GenerateAsync()
+        //{
+        //    var assignments = await AssignmentRepo.GetAllAsync();
+        //    var hesasConfig = await DayHesasCountRepo.GetAllAsync();
+
+        //    foreach (var assignment in assignments)
+        //    {
+        //        int remainingPeriods = assignment.WeekHesasCount;
+
+        //        var teacherPrefs = await _teacherSettingsService.GetPreferencesAsync(assignment.IsnadUserId);
+        //        var goldenDay = await _teacherSettingsService.GetGoldenDayAsync(assignment.IsnadUserId);
+        //        var availableDays = await _teacherSettingsService.GetTeacherAvailableDays(assignment.IsnadUserId);
+
+        //        if (availableDays.Count == 0)
+        //            availableDays = new List<int> { 1, 2, 3, 4, 5 };
+
+        //        int tryCount = 0;
+        //        int maxTryCount = 100;
+
+        //        while (remainingPeriods > 0 && tryCount < maxTryCount)
+        //        {
+        //            bool assignedInThisCycle = false;
+        //            int relaxLevel = tryCount / 10;
+
+        //            foreach (var day in availableDays)
+        //            {
+        //                if (remainingPeriods == 0) break;
+
+        //                int dayMax = await GetDayMaxPeriods(hesasConfig, assignment.SafId, day);
+        //                var bestPeriods = await GetBestPeriods(teacherPrefs, dayMax, goldenDay, day, relaxLevel);
+
+        //                foreach (var period in bestPeriods)
+        //                {
+        //                    if (await CanAssign(assignment.IsnadUserId, assignment.SafId, assignment.ShobaId, day, period, teacherPrefs, remainingPeriods, availableDays, relaxLevel))
+        //                    {
+        //                        await AddEntryAsync(assignment, day, period);
+        //                        remainingPeriods--;
+        //                        assignedInThisCycle = true;
+        //                        break;
+        //                    }
+        //                }
+        //            }
+
+        //            tryCount = assignedInThisCycle ? 0 : tryCount + 1;
+        //        }
+
+        //        while (remainingPeriods > 0)
+        //        {
+        //            bool assigned = false;
+
+        //            foreach (var day in Enumerable.Range(1, 5))
+        //            {
+        //                int dayMax = await GetDayMaxPeriods(hesasConfig, assignment.SafId, day);
+
+        //                for (int period = 1; period <= dayMax; period++)
+        //                {
+        //                    if (!await HasConflict(day, period, assignment.SafId, assignment.ShobaId, assignment.IsnadUserId))
+        //                    {
+        //                        await AddEntryAsync(assignment, day, period);
+        //                        remainingPeriods--;
+        //                        assigned = true;
+        //                        break;
+        //                    }
+        //                }
+
+        //                if (assigned || remainingPeriods == 0)
+        //                    break;
+        //            }
+
+        //            if (!assigned)
+        //            {
+        //                throw new Exception($"فشل توزيع {remainingPeriods} حصة للمعلم {assignment.IsnadUserId} في الصف {assignment.SafId} والشعبة {assignment.ShobaId} حتى بعد التوزيع الإجباري.");
+        //            }
+        //        }
+        //    }
+
+        //    await _unitOfWork.CompleteAsync();
+        //}
+
+        //private async Task AddEntryAsync(Assignment assignment, int day, int period)
+        //{
+        //    var newTimeTable = new TimeTable()
+        //    {
+        //        TableId = 1,
+        //        SchoolId = 1234,
+        //        DayNo = day,
+        //        Hesa = period,
+        //        MadaId = assignment.MadaId,
+        //        SafId = assignment.SafId,
+        //        ShobaId = assignment.ShobaId,
+        //        UserId = assignment.IsnadUserId,
+        //    };
+
+        //    await _TimeTableRepo.AddAsync(newTimeTable);
+
+        //    Entries.Add(new TimeTableEntry
+        //    {
+        //        TeacherId = assignment.IsnadUserId,
+        //        ClassId = assignment.SafId,
+        //        ShobaId = assignment.ShobaId,
+        //        DayOfWeek = day,
+        //        PeriodIndex = period
+        //    });
+        //}
+
+        //public async Task<bool> CanAssign(int teacherId, int classId, int shobaId, int dayOfWeek, int periodIndex,
+        //    TeacherPreference? preferences, int remainingTeacherLoad, List<int> availableDays, int relaxLevel)
+        //{
+        //    if (!availableDays.Contains(dayOfWeek)) return false;
+        //    if (remainingTeacherLoad <= 0) return false;
+        //    if (await HasConflict(dayOfWeek, periodIndex, classId, shobaId, teacherId)) return false;
+
+        //    // تجنب الحصة الأولى بعد يوم فاضي
+        //    if (relaxLevel < 9 && periodIndex == 1 && dayOfWeek > 1)
+        //    {
+        //        int prevDay = dayOfWeek - 1;
+        //        bool hadClassPrevDay = Entries.Any(e => e.TeacherId == teacherId && e.DayOfWeek == prevDay);
+        //        if (!hadClassPrevDay)
+        //            return false;
+        //    }
+
+        //    if (relaxLevel < 8)
+        //    {
+        //        var teacherPeriodsThatDay = Entries
+        //            .Where(e => e.TeacherId == teacherId && e.DayOfWeek == dayOfWeek)
+        //            .Select(e => e.PeriodIndex)
+        //            .OrderBy(p => p)
+        //            .ToList();
+
+        //        int maxConsecutive = 3;
+        //        if (teacherPeriodsThatDay.Count > 0)
+        //        {
+        //            var periods = new List<int?>(teacherPeriodsThatDay) { periodIndex };
+        //            periods.Sort();
+
+        //            int consecutiveCount = 1;
+        //            for (int i = 1; i < periods.Count; i++)
+        //            {
+        //                if (periods[i] == periods[i - 1] + 1)
+        //                    consecutiveCount++;
+        //                else
+        //                    consecutiveCount = 1;
+
+        //                if (consecutiveCount > maxConsecutive)
+        //                    return false;
+        //            }
+        //        }
+        //    }
+
+        //    return true;
+        //}
+
+        //public async Task<bool> HasConflict(int dayOfWeek, int periodIndex, int classId, int shobaId, int teacherId)
+        //{
+        //    return Entries.Any(e =>
+        //        e.DayOfWeek == dayOfWeek &&
+        //        e.PeriodIndex == periodIndex &&
+        //        (e.ClassId == classId && e.ShobaId == shobaId || e.TeacherId == teacherId));
+        //}
+
+        //private async Task<int> GetDayMaxPeriods(IEnumerable<DayHesasCount?> hesasConfig, int classId, int day)
+        //{
+        //    var config = hesasConfig.FirstOrDefault(h => h.ClassId == classId && h.DayId == day);
+        //    return config?.DayHesaCount ?? 7;
+        //}
+
+        //private async Task<List<int>> GetBestPeriods(TeacherPreference? teacherPrefs, int dayMax, GoldenDaySetting? goldenDay, int day, int relaxLevel = 0)
+        //{
+        //    var periods = new List<int>();
+        //    int totalPeriods = 8;
+
+        //    if (relaxLevel < 2 && goldenDay?.DayOfWeek == day)
+        //    {
+        //        for (int i = 1; i <= goldenDay.MaxPeriods && i <= totalPeriods; i++)
+        //            periods.Add(i);
+        //        return periods;
+        //    }
+
+        //    var availablePeriods = Enumerable.Range(1, totalPeriods).ToList();
+
+        //    if (teacherPrefs is not null && relaxLevel < 5)
+        //    {
+        //        if (teacherPrefs.PreferLateStart)
+        //            availablePeriods = availablePeriods.Where(p => p > 2).ToList();
+
+        //        if (teacherPrefs.PreferEarlyFinish)
+        //            availablePeriods = availablePeriods.Where(p => p < totalPeriods - 1).ToList();
+        //    }
+
+        //    if (availablePeriods.Count == 0)
+        //        availablePeriods = Enumerable.Range(1, totalPeriods).ToList();
+
+        //    int step = Math.Max(1, availablePeriods.Count / Math.Max(1, dayMax));
+
+        //    for (int i = 0; i < availablePeriods.Count && periods.Count < dayMax; i += step)
+        //        periods.Add(availablePeriods[i]);
+
+        //    periods.Sort();
+        //    return periods;
+        //}
