@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --logo-width:27px;
+    --dark:#001D38;
+    --top-dimension:calc(100vh - 72px);
+}
+
+body{ 
+    scroll-behavior: smooth;
+
+}
+.logo {
+    width: var(--logo-width);
+}
+.container {
+    z-index: 1;
+}
+/* Start NavBar */
+nav {
+    z-index: 9999;
+}
+nav .navbar-toggler {
+    background-color: rgb(255, 254, 254);
+}
+.navbar-btn {
+    position: absolute;
+    right: 10%;
+}
+.navbar-btn a {
+    transition: 0.3s ease;
+}
+.navbar-btn:hover a {
+    transform: scale(1.1);
+}
+/* End NavBar */
+
+/* Start Landing */
+.landing {
+    background-image: url('../images/landing.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    top:0;
+    left: 0;
+}
+.landing::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+.landing .btn {
+    transition: 0.3s ease;
+}
+.landing .btn:hover {
+    transform: scale(1.1);
+}
+/* End Landing */
+
+/* Start Shop */
+.shop {
+    top:var(--top-dimension);
+}
+
+.active-li {
+    background-color: var(--dark);
+    color: white;
+}
+.shop input {
+    outline: 0;
+}
+.shop .bottom-link {
+    position: absolute;
+    right: 6%;
+    bottom: 4%;
+}
+/* End Shop */
+
+/* Start Services */
+.services {
+    top:var(--top-dimension);
+}
+
+/* End Services */
+
+/* Start about */
+.about {
+    top:var(--top-dimension);
+}
+.about .about-miniphoto {
+    width: 250px;
+    bottom: 0;
+    transform: translate(-50%);
+    border: 15px solid white;
+}
+
+/* End about */
+
+/* Start team */
+.team {
+    top:var(--top-dimension);
+}
+/* End team */
+
+/* Start Blog */
+.blog {
+    top: calc(100vh - calc(3 * 72px));
+}
+.blog a {
+    background-color: var(--dark);
+    transition: 0.3s ease;
+}
+.blog a:hover {
+    background-color: var(--dark);
+    transform: scale(1.1);
+}
+/* End Blog */
+/* Start Touch */
+.touch {
+    top: calc(100vh - calc(3 * 72px));
+    background-color: var(--dark);
+    color: white;
+}
+.touch::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.382);
+}
+.touch button {
+    background-color: var(--dark);
+}
+/* End Touch */
+
+/* Start Footer */
+footer {
+    position: relative;
+    top: calc(100vh - calc(3 * 88px));
+    background-color: var(--dark);
+}
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.382);
+}
+footer input {
+    outline: 0;
+}
+/* End Footer */
