@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Josefin Sans", sans-serif !important;
+}
+header ul li a,
+header p,
+header svg {
+    color: white;
+}
+header p {
+    font-size: 0.8rem;
+}
+.landing {
+    background-image: url('imgs/ecommerce-cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}

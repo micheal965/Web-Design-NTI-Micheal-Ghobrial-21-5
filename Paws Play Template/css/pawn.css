@@ -162,3 +162,12 @@ footer input {
     outline: 0;
 }
 /* End Footer */
+
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .special-parent {
+        height: 200px;
+    }
+}
+
