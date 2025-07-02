@@ -1,0 +1,21 @@
+<div class="container">
+  <ul class="special">
+    <li><a class="btn" role="button" href="#">Home</a></li>
+    <li><a class="btn" role="button" href="#">Contact</a></li>
+    <li><a class="btn" role="button" href="#">Test</a></li>
+  </ul>
+</div>
+
+<script>
+  const liItems = document.querySelectorAll(".special .btn");
+
+  liItems.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      liItems.forEach((btn) => btn.classList.remove("btn-primary"));
+
+      this.classList.add("btn-primary");
+    });
+  });
+</script>

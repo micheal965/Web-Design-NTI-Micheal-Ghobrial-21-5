@@ -14,6 +14,9 @@
     />
     <!-- Icons -->
     <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Carousel -->
+     <link rel="stylesheet" href="css/owl.carousel.min.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <!-- Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
@@ -68,21 +71,21 @@
         </div>
       </div>
     </header>
-    <nav class="navbar navbar-expand-lg bg-secondary">
+    <span class="gears bg-white z-1 fs-3 position-fixed">
+      <button class="border-0 bg-transparent">
+        <i class="fa-solid fa-gears opacity-change"></i>
+      </button>
+    </span>
+    <nav class="navbar navbar-expand-lg">
       <div class="container py-2">
-        <div class="row">
-          <a
-            class="col col-md-3 d-flex justify-content-end navbar-brand"
-            href="#"
-          >
-            <img
-              class="img-fluid"
-              src="imgs/Trade-X-Logo.png.crdownload"
-              alt=""
-            />
-          </a>
+        <div class="row col-12">
+          <div class="col col-md-4 d-flex justify-content-center">
+            <a class="navbar-brand" href="#">
+              <img class="img-fluid" src="imgs/Trade-X-Logo.png" alt="logo" />
+            </a>
+          </div>
           <div
-            class="col-md-9 collapse navbar-collapse"
+            class="col col-md-8 collapse navbar-collapse"
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
@@ -208,20 +211,386 @@
               </li>
             </ul>
           </div>
+          <div class="col col-md-8">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
         </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
       </div>
     </nav>
-    <section class="landing"></section>
+    <div class="landing container-fluid position-relative"></div>
+    <div class="about-us container-fluid mt-5">
+      <div class="container-lg">
+        <div class="row py-5">
+          <div class="sec-title col-12 text-center">
+            <h1 class="position-relative">About Us</h1>
+            <p class="text-black-50">About Us</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-2">
+            <ul
+              class="list-unstyled d-flex flex-column gap-2 bg-white p-3 p-lg"
+            >
+              <li class="d-flex gap-5 align-items-center">
+                <i class="fa-solid fa-bullhorn fs-2"></i>
+                <div class="li-content position-relative">
+                  <h2 class="fs-5 mb-2">Marketing</h2>
+                  <p class="text-black-50 lh-md">
+                    Lorem ipsum dolor sit amet, Aenea jkn consectetuer adipiscn
+                    elit.
+                  </p>
+                </div>
+              </li>
+              <li class="d-flex gap-5 align-items-center">
+                <i class="fa-solid fa-sliders fs-2"></i>
+                <div class="li-content position-relative">
+                  <h2 class="fs-5 mb-2">Great Usability</h2>
+                  <p class="text-black-50 lh-md">
+                    Lorem ipsum dolor sit amet, Aenea jkn consectetuer adipiscn
+                    elit.
+                  </p>
+                </div>
+              </li>
+              <li class="d-flex gap-5 align-items-center">
+                <i class="fa-solid fa-computer fs-3"></i>
+                <div class="li-content position-relative">
+                  <h2 class="fs-5 mb-2">Unique Design</h2>
+                  <p class="text-black-50 lh-md">
+                    Lorem ipsum dolor sit amet, Aenea jkn consectetuer adipiscn
+                    elit.
+                  </p>
+                </div>
+              </li>
+              <li class="d-flex gap-5 align-items-center">
+                <i class="fa-regular fa-thumbs-up fs-2"></i>
+                <div class="li-content position-relative">
+                  <h2 class="fs-5 mb-2">Quick & Powerful</h2>
+                  <p class="text-black-50 lh-md">
+                    Lorem ipsum dolor sit amet, Aenea jkn consectetuer adipiscn
+                    elit.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-md-6 col-lg-6 d-flex justify-content-center position-relative"
+          >
+            <img src="imgs/abt-3.jpg" alt="about-us" class="img-fluid w-100" />
+          </div>
+          <div class="col-12 col-md-12 col-lg-4 mt-5 mt-lg-0">
+            <p class="opacity-75 lh-md">
+              Dorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              blandit nisi a dictum tristique. Nullam urna metus, vestibulum ac
+              sodales eSed ut perspiciatis unde omnis iste natus error sit
+              voluptatem accusantium doloremque laudantium totam remrutrumDorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
+              perspiciatis.
+            </p>
+            <p class="opacity-75 lh-md">
+              Dorem ipsum dolor sit amet. consectetur adipiscing elit. Ut
+              blandit nisi a dictum tristique. Nullam urna metus, vestibulum ac
+              sodales eSed ut perspiciatis unde omnis iste natus error sit
+              voluptatem accusantium doloremque laudantium totam remrutrumDorem
+              ipsum dolor sit amet, consectetur.
+            </p>
+            <button class="btn btn-primary rounded-pill px-4">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="counters container-fluid mt-5">
+      <div class="container p-5">
+        <ul class="row list-unstyled gap-5 d-flex py-5">
+          <li class="col d-flex gap-4 align-items-center">
+            <div class="img-container bg-white p-3">
+              <i class="fa-solid fa-display fs-2"></i>
+            </div>
+            <div class="list-item d-flex flex-column mt-3">
+              <h2 class="fs-3 mb-0">8000</h2>
+              <p class="text-black-50">Total Projects</p>
+            </div>
+          </li>
+          <li class="col d-flex gap-4 align-items-center">
+            <div class="img-container bg-white p-3">
+              <i class="fa-solid fa-trophy fs-2"></i>
+            </div>
+            <div class="list-item d-flex flex-column mt-3">
+              <h2 class="fs-3 mb-0">810</h2>
+              <p class="text-black-50">Won Awards</p>
+            </div>
+          </li>
+          <li class="col d-flex gap-4 align-items-center">
+            <div class="img-container bg-white p-3">
+              <i class="fa-regular fa-face-smile fs-2"></i>
+            </div>
+            <div class="list-item d-flex flex-column mt-3">
+              <h2 class="fs-3 mb-0">2000</h2>
+              <p class="text-black-50">Happy Clients</p>
+            </div>
+          </li>
+          <li class="col d-flex gap-4 align-items-center">
+            <div class="img-container bg-white p-3">
+              <i class="fa-regular fa-calendar-days fs-2"></i>
+            </div>
+            <div class="list-item d-flex flex-column mt-3">
+              <h2 class="fs-3 mb-0">20</h2>
+              <p class="text-black-50">Years Experience</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="services container-fluid position-relative mb-5">
+      <div class="container-lg py-5 px-0 px-lg-1">
+        <div class="row pt-5 text-center">
+          <div class="sec-title col-12 text-center text-light z-3 ">
+            <h1 class="position-relative mb-3">Our Services</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit, sed do eiusm dipisicing
+              elit, sed do eiusmod tempor.
+            </p>
+          </div>
+        </div>
+        <div class="row py-5 row-cols-1 row-cols-md-2 row-cols-lg-3 text-light text-center gy-4"> 
+          <div class="col z-3">
+            <div class="border border-secondary bg-transparent  py-5 rounded position-relative">
+              <i class="fa-solid fa-cloud-arrow-up fs-1 my-4"></i>
+              <h2 class="fs-3">Online Marketing</h2>
+              <span class="rounded">
+                  <h2 class="fs-4">Online Marketing</h2>
+                  <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                  <button class="btn btn-primary rounded-pill">Read More</button>
+                </span>
+            </div>
+          </div>
+          <div class="col z-3">
+            <div class="border border-secondary bg-transparent py-5 rounded position-relative">
+              <i class="fa-solid fa-tv fs-1 my-4"></i>
+              <h2 class="fs-3">Web Design</h2>
+              <span class="rounded">
+                <h2 class="fs-4">Web Design</h2>
+                <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                <button class="btn btn-primary rounded-pill">Read More</button>
+              </span>
+            </div>
+          </div>
+          <div class="col z-3">
+            <div class="border border-secondary bg-transparent  py-5 rounded position-relative">
+              <i class="fa-solid fa-pencil  fs-1 my-4"></i>
+              <h2 class="fs-3">Graphic Design</h2>
+              <span class="rounded">
+                <h2 class="fs-4">Graphic Design</h2>
+                <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                <button class="btn btn-primary rounded-pill">Read More</button>
+              </span>
+            </div>
+          </div>
+          <div class="col z-3">
+            <div class="border border-secondary bg-transparent py-5 rounded position-relative">
+              <i class="fa-solid fa-desktop fs-1 my-4"></i>
+              <h2 class="fs-3">Web Development</h2>
+                <span class="rounded">
+                <h2 class="fs-4">Web Development</h2>
+                <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                <button class="btn btn-primary rounded-pill">Read More</button>
+              </span>
+            </div>
+          </div>
+          <div class="col z-3">
+            <div class="border border-secondary bg-transparent py-5 rounded position-relative">
+              <i class="fa-solid fa-hexagon-nodes fs-1 my-4"></i>
+              <h2 class="fs-3 ">Networking</h2>
+              <span class="rounded">
+                <h2 class="fs-4">Networking</h2>
+                <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                <button class="btn btn-primary rounded-pill">Read More</button>
+              </span>
+            </div>
+          </div>
+          <div class="col z-3">
+            <div class="border border-secondary bg-transparent py-5 rounded position-relative">
+              <i class="fa-brands fa-wordpress fs-1 my-4"></i>
+              <h2 class="fs-3 ">Wordpress Theme</h2>
+              <span class="rounded">
+                <h2 class="fs-4">Wordpress Theme</h2>
+                <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                <button class="btn btn-primary rounded-pill">Read More</button>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="container">
+      
+    <div class="owl-carousel">
+      <div>
+          <div class="card mb-3">
+              <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
+                          class="img-fluid rounded-start h-100" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural
+                              lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+     <div>
+          <div class="card mb-3">
+              <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
+                          class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural
+                              lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+       <div>
+          <div class="card mb-3">
+              <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
+                          class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural
+                              lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+       <div>
+          <div class="card mb-3">
+              <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
+                          class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural
+                              lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+       <div>
+          <div class="card mb-3">
+              <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
+                          class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural
+                              lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+       <div>
+          <div class="card mb-3">
+              <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
+                          class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural
+                              lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+       <div>
+          <div class="card mb-3">
+              <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
+                          class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural
+                              lead-in to
+                              additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    </div> -->
+
+
+</div>
+
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/Scripts.js"></script>
   </body>
 </html>
