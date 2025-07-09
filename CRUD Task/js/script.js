@@ -2,9 +2,9 @@
 
 const Users=[];
 
-numberOfUsers();
+// numberOfUsers();
 
-EditUserBalanceById();
+// EditUserBalanceById();
 DeleteUserById();
 
     function numberOfUsers(){
@@ -12,8 +12,12 @@ DeleteUserById();
         for(let i = 0 ; i < num ; i++) {
             addUser();
         }
-        console.log(Users);
     } 
+    function GetUsers(){
+        let Users=JSON.parse(localStorage.getItem('Users'));
+        console.log(Users);
+        } 
+
 
 
     function addUser() {
@@ -29,6 +33,7 @@ DeleteUserById();
             Balance:Balance
         };
         Users.push(user);
+        localStorage.setItem('Users',JSON.stringify(Users));
     }
 
 
@@ -38,19 +43,26 @@ DeleteUserById();
         
         if(newBalance < 0) return;
 
-        let user =Users.find(u=>u.ID == id);
+        let UsersFromLS=JSON.parse(localStorage.getItem('Users'));
+
+        let user =UsersFromLS.find(u=>u.ID == id);
         if(user ==null) return;
 
         user.Balance=newBalance;
-        console.log(Users);
+        localStorage.setItem('Users',JSON.stringify(UsersFromLS));
     }
 
     function DeleteUserById (){
         let id =prompt('Enter User Id to Delete');
-        let Index =Users.findIndex(u=>u.ID == id);
+
+        let UsersFromLS=JSON.parse(localStorage.getItem('Users'));
+
+        let Index =UsersFromLS.findIndex(u=>u.ID == id);
         
         if (Index !== -1) 
-            Users.splice(Index, 1);
+            UsersFromLS.splice(Index, 1);
 
-        console.log(Users);
+        localStorage.setItem('Users',JSON.stringify(UsersFromLS));
+
+        
     }

@@ -15,8 +15,8 @@
     <!-- Icons -->
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- Carousel -->
-     <link rel="stylesheet" href="css/owl.carousel.min.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <!-- Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
@@ -71,24 +71,24 @@
         </div>
       </div>
     </header>
-    <span class="gears bg-white z-1 fs-3 position-fixed">
+    <span class="gears bg-white z-3 fs-3 position-fixed">
       <button class="border-0 bg-transparent">
         <i class="fa-solid fa-gears opacity-change"></i>
       </button>
     </span>
     <nav class="navbar navbar-expand-lg">
       <div class="container py-2">
-        <div class="row col-12">
-          <div class="col col-md-4 d-flex justify-content-center">
+        <div class="row col-12 align-items-center">
+          <div class="col col-lg-4 d-flex justify-content-center">
             <a class="navbar-brand" href="#">
               <img class="img-fluid" src="imgs/Trade-X-Logo.png" alt="logo" />
             </a>
           </div>
           <div
-            class="col col-md-8 collapse navbar-collapse"
+            class="col col-lg-8 collapse navbar-collapse"
             id="navbarSupportedContent"
           >
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0 flex-wrap">
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -211,7 +211,7 @@
               </li>
             </ul>
           </div>
-          <div class="col col-md-8">
+          <div class="col d-block d-lg-none">
             <button
               class="navbar-toggler"
               type="button"
@@ -230,9 +230,11 @@
     <div class="landing container-fluid position-relative"></div>
     <div class="about-us container-fluid mt-5">
       <div class="container-lg">
-        <div class="row py-5">
+        <div class="sec-container row py-5">
+          <span class="left-span"></span>
+          <span class="right-span"></span>
           <div class="sec-title col-12 text-center">
-            <h1 class="position-relative">About Us</h1>
+            <h1>About Us</h1>
             <p class="text-black-50">About Us</p>
           </div>
         </div>
@@ -304,7 +306,9 @@
               voluptatem accusantium doloremque laudantium totam remrutrumDorem
               ipsum dolor sit amet, consectetur.
             </p>
-            <button class="btn btn-primary rounded-pill px-4">
+            <button
+              class="btn btn-primary btn-custom bg-primary rounded-pill px-4 position-relative"
+            >
               Learn More
             </button>
           </div>
@@ -319,7 +323,7 @@
               <i class="fa-solid fa-display fs-2"></i>
             </div>
             <div class="list-item d-flex flex-column mt-3">
-              <h2 class="fs-3 mb-0">8000</h2>
+              <h2 class="fs-3 mb-0 counter" data-target="8000">0</h2>
               <p class="text-black-50">Total Projects</p>
             </div>
           </li>
@@ -328,7 +332,7 @@
               <i class="fa-solid fa-trophy fs-2"></i>
             </div>
             <div class="list-item d-flex flex-column mt-3">
-              <h2 class="fs-3 mb-0">810</h2>
+              <h2 class="fs-3 mb-0 counter" data-target="810">0</h2>
               <p class="text-black-50">Won Awards</p>
             </div>
           </li>
@@ -337,7 +341,7 @@
               <i class="fa-regular fa-face-smile fs-2"></i>
             </div>
             <div class="list-item d-flex flex-column mt-3">
-              <h2 class="fs-3 mb-0">2000</h2>
+              <h2 class="fs-3 mb-0 counter" data-target="2000">0</h2>
               <p class="text-black-50">Happy Clients</p>
             </div>
           </li>
@@ -346,7 +350,7 @@
               <i class="fa-regular fa-calendar-days fs-2"></i>
             </div>
             <div class="list-item d-flex flex-column mt-3">
-              <h2 class="fs-3 mb-0">20</h2>
+              <h2 class="fs-3 mb-0 counter" data-target="20">0</h2>
               <p class="text-black-50">Years Experience</p>
             </div>
           </li>
@@ -355,9 +359,11 @@
     </div>
     <div class="services container-fluid position-relative mb-5">
       <div class="container-lg py-5 px-0 px-lg-1">
-        <div class="row pt-5 text-center">
-          <div class="sec-title col-12 text-center text-light z-3 ">
-            <h1 class="position-relative mb-3">Our Services</h1>
+        <div class="sec-container row pt-5 text-center">
+          <span class="left-span"></span>
+          <span class="right-span"></span>
+          <div class="container col-8 sec-title text-light z-3">
+            <h1 class="mb-3">Our Services</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor
@@ -366,229 +372,1132 @@
             </p>
           </div>
         </div>
-        <div class="row py-5 row-cols-1 row-cols-md-2 row-cols-lg-3 text-light text-center gy-4"> 
+        <div
+          class="row py-5 row-cols-1 row-cols-md-2 row-cols-lg-3 text-light text-center gy-4"
+        >
           <div class="col z-3">
-            <div class="border border-secondary bg-transparent  py-5 rounded position-relative">
+            <div
+              class="border border-secondary bg-transparent py-5 rounded position-relative"
+            >
               <i class="fa-solid fa-cloud-arrow-up fs-1 my-4"></i>
               <h2 class="fs-3">Online Marketing</h2>
               <span class="rounded">
-                  <h2 class="fs-4">Online Marketing</h2>
-                  <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-                  <button class="btn btn-primary rounded-pill">Read More</button>
-                </span>
+                <h2 class="fs-4">Online Marketing</h2>
+                <p class="fw-light mt-3">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum
+                  dolor sit amet.
+                </p>
+                <button class="btn btn-primary rounded-pill">Read More</button>
+              </span>
             </div>
           </div>
           <div class="col z-3">
-            <div class="border border-secondary bg-transparent py-5 rounded position-relative">
+            <div
+              class="border border-secondary bg-transparent py-5 rounded position-relative"
+            >
               <i class="fa-solid fa-tv fs-1 my-4"></i>
               <h2 class="fs-3">Web Design</h2>
               <span class="rounded">
                 <h2 class="fs-4">Web Design</h2>
-                <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                <p class="fw-light mt-3">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum
+                  dolor sit amet.
+                </p>
                 <button class="btn btn-primary rounded-pill">Read More</button>
               </span>
             </div>
           </div>
           <div class="col z-3">
-            <div class="border border-secondary bg-transparent  py-5 rounded position-relative">
-              <i class="fa-solid fa-pencil  fs-1 my-4"></i>
+            <div
+              class="border border-secondary bg-transparent py-5 rounded position-relative"
+            >
+              <i class="fa-solid fa-pencil fs-1 my-4"></i>
               <h2 class="fs-3">Graphic Design</h2>
               <span class="rounded">
                 <h2 class="fs-4">Graphic Design</h2>
-                <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                <p class="fw-light mt-3">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum
+                  dolor sit amet.
+                </p>
                 <button class="btn btn-primary rounded-pill">Read More</button>
               </span>
             </div>
           </div>
           <div class="col z-3">
-            <div class="border border-secondary bg-transparent py-5 rounded position-relative">
+            <div
+              class="border border-secondary bg-transparent py-5 rounded position-relative"
+            >
               <i class="fa-solid fa-desktop fs-1 my-4"></i>
               <h2 class="fs-3">Web Development</h2>
-                <span class="rounded">
+              <span class="rounded">
                 <h2 class="fs-4">Web Development</h2>
-                <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                <p class="fw-light mt-3">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum
+                  dolor sit amet.
+                </p>
                 <button class="btn btn-primary rounded-pill">Read More</button>
               </span>
             </div>
           </div>
           <div class="col z-3">
-            <div class="border border-secondary bg-transparent py-5 rounded position-relative">
+            <div
+              class="border border-secondary bg-transparent py-5 rounded position-relative"
+            >
               <i class="fa-solid fa-hexagon-nodes fs-1 my-4"></i>
-              <h2 class="fs-3 ">Networking</h2>
+              <h2 class="fs-3">Networking</h2>
               <span class="rounded">
                 <h2 class="fs-4">Networking</h2>
-                <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                <p class="fw-light mt-3">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum
+                  dolor sit amet.
+                </p>
                 <button class="btn btn-primary rounded-pill">Read More</button>
               </span>
             </div>
           </div>
           <div class="col z-3">
-            <div class="border border-secondary bg-transparent py-5 rounded position-relative">
+            <div
+              class="border border-secondary bg-transparent py-5 rounded position-relative"
+            >
               <i class="fa-brands fa-wordpress fs-1 my-4"></i>
-              <h2 class="fs-3 ">Wordpress Theme</h2>
+              <h2 class="fs-3">Wordpress Theme</h2>
               <span class="rounded">
                 <h2 class="fs-4">Wordpress Theme</h2>
-                <p class="fw-light mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                <p class="fw-light mt-3">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum
+                  dolor sit amet.
+                </p>
                 <button class="btn btn-primary rounded-pill">Read More</button>
               </span>
             </div>
           </div>
-
         </div>
       </div>
     </div>
-
-
-    <!-- <div class="container">
-      
-    <div class="owl-carousel">
-      <div>
-          <div class="card mb-3">
-              <div class="row g-0">
-                  <div class="col-md-4">
-                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
-                          class="img-fluid rounded-start h-100" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural
-                              lead-in to
-                              additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                          </p>
-                      </div>
-                  </div>
-              </div>
+    <div class="work container-fluid position-relative mb-5">
+      <div class="container-lg py-5 px-0 px-lg-1">
+        <div class="sec-container row pb-4 text-center">
+          <span class="left-span"></span>
+          <span class="right-span"></span>
+          <div class="container col-8 sec-title">
+            <h1 class="mb-3">Our Work</h1>
+            <p class="text-black-50">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              tempor, nisl sed bibendum pretium, diam nisi mattis lectus, eu
+              varius lorem mauris posuere dui. Proin consequat.
+            </p>
+            <nav
+              aria-label="breadcrumb"
+              class="d-flex justify-content-center mt-5"
+            >
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">All</a></li>
+                <li class="breadcrumb-item" aria-current="page">
+                  <a href="">Creative Design</a>
+                </li>
+                <li class="breadcrumb-item" aria-current="page">
+                  <a href="">Development</a>
+                </li>
+                <li class="breadcrumb-item" aria-current="page">
+                  <a href="">Graphic Design</a>
+                </li>
+              </ol>
+            </nav>
           </div>
-      </div>
-     <div>
-          <div class="card mb-3">
-              <div class="row g-0">
-                  <div class="col-md-4">
-                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
-                          class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural
-                              lead-in to
-                              additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                          </p>
-                      </div>
-                  </div>
-              </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+          <div class="col my-3">
+            <img
+              class="img-fluid rounded w-100"
+              src="imgs/port2-360x380.jpg"
+              alt="WorkPhoto"
+            />
+            <span>
+              <p class="m-1">Development, Graphic Design</p>
+              <h2 class="fs-5 ps-1">Project Title01</h2>
+            </span>
           </div>
-      </div>
-       <div>
-          <div class="card mb-3">
-              <div class="row g-0">
-                  <div class="col-md-4">
-                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
-                          class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural
-                              lead-in to
-                              additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                          </p>
-                      </div>
-                  </div>
-              </div>
+          <div class="col my-3">
+            <img
+              class="img-fluid rounded w-100"
+              src="imgs/computer-472016_1920-360x380.jpg"
+              alt="WorkPhoto"
+            />
+            <span>
+              <p class="m-1">Development, Graphic Design</p>
+              <h2 class="fs-5 ps-1">Project Title02</h2>
+            </span>
           </div>
-      </div>
-       <div>
-          <div class="card mb-3">
-              <div class="row g-0">
-                  <div class="col-md-4">
-                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
-                          class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural
-                              lead-in to
-                              additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                          </p>
-                      </div>
-                  </div>
-              </div>
+          <div class="col my-3">
+            <img
+              class="img-fluid rounded w-100"
+              src="imgs/office-1209640_1920-1-360x380.jpg"
+              alt="WorkPhoto"
+            />
+            <span>
+              <p class="m-1">Development, Graphic Design</p>
+              <h2 class="fs-5 ps-1">Project Title03</h2>
+            </span>
           </div>
-      </div>
-       <div>
-          <div class="card mb-3">
-              <div class="row g-0">
-                  <div class="col-md-4">
-                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
-                          class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural
-                              lead-in to
-                              additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                          </p>
-                      </div>
-                  </div>
-              </div>
+          <div class="col my-3">
+            <img
+              class="img-fluid rounded w-100"
+              src="imgs/port7-360x380.jpg"
+              alt="WorkPhoto"
+            />
+            <span>
+              <p class="m-1">Development, Graphic Design</p>
+              <h2 class="fs-5 ps-1">Project Title04</h2>
+            </span>
           </div>
-      </div>
-       <div>
-          <div class="card mb-3">
-              <div class="row g-0">
-                  <div class="col-md-4">
-                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
-                          class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural
-                              lead-in to
-                              additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                          </p>
-                      </div>
-                  </div>
-              </div>
+          <div class="col my-3">
+            <img
+              class="img-fluid rounded w-100"
+              src="imgs/suit-869380_1920-360x380.jpg"
+              alt="WorkPhoto"
+            />
+            <span>
+              <p class="m-1">Development, Graphic Design</p>
+              <h2 class="fs-5 ps-1">Project Title05</h2>
+            </span>
           </div>
-      </div>
-       <div>
-          <div class="card mb-3">
-              <div class="row g-0">
-                  <div class="col-md-4">
-                      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"
-                          class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural
-                              lead-in to
-                              additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                          </p>
-                      </div>
-                  </div>
-              </div>
+          <div class="col my-3">
+            <img
+              class="img-fluid rounded w-100"
+              src="imgs/port2-5-360x380.jpg"
+              alt="WorkPhoto"
+            />
+            <span>
+              <p class="m-1">Development, Graphic Design</p>
+              <h2 class="fs-5 ps-1">Project Title06</h2>
+            </span>
           </div>
+        </div>
       </div>
-  </div>
-    </div> -->
-
-
-</div>
-
-
+    </div>
+    <div class="fluid-image-section container-fluid"></div>
+    <div class="team container-fluid">
+      <div class="container-lg py-5 px-0 px-lg-1">
+        <div class="sec-container row pt-5 text-center">
+          <span class="left-span"></span>
+          <span class="right-span"></span>
+          <div class="container col-8 sec-title">
+            <h1 class="mb-3">Our Creative Team</h1>
+            <p class="text-black-50">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit, sed do eiusm dipisicing
+              elit, sed do eiusmod tempor.
+            </p>
+          </div>
+        </div>
+        <div
+          class="row py-5 row-cols-1 row-cols-md-2 row-cols-lg-3 text-center gy-5"
+        >
+          <div class="col">
+            <img class="img-fluid" src="imgs/team1.png" alt="team1" />
+            <div class="team-card-content bg-white pt-2 px-5 rounded-bottom">
+              <h2 class="fs-5 m-0">Jen Whyan</h2>
+              <p class="text-primary">Founder</p>
+              <p class="text-black-50">
+                Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget,
+                imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices
+                mauris....
+              </p>
+              <ul
+                class="list-unstyled d-flex justify-content-center bg-primary py-1 gap-4 rounded-top"
+              >
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-google-plus-g"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-tumblr"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <img class="img-fluid" src="imgs/team2.png" alt="team2" />
+            <div class="team-card-content bg-white pt-2 px-5 rounded-bottom">
+              <h2 class="fs-5 m-0">Mical Peterson</h2>
+              <p class="text-primary">Founder</p>
+              <p class="text-black-50">
+                Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget,
+                imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices
+                mauris....
+              </p>
+              <ul
+                class="list-unstyled d-flex justify-content-center bg-primary py-1 gap-4 rounded-top"
+              >
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-google-plus-g"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-tumblr"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <img class="img-fluid" src="imgs/team3.png" alt="team3" />
+            <div class="team-card-content bg-white pt-2 px-5 rounded-bottom">
+              <h2 class="fs-5 m-0">Sara Corner</h2>
+              <p class="text-primary">Founder</p>
+              <p class="text-black-50">
+                Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget,
+                imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices
+                mauris....
+              </p>
+              <ul
+                class="list-unstyled d-flex justify-content-center bg-primary py-1 gap-4 rounded-top"
+              >
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-google-plus-g"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-tumblr"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <img class="img-fluid" src="imgs/team4.png" alt="team4" />
+            <div class="team-card-content bg-white pt-2 px-5 rounded-bottom">
+              <h2 class="fs-5 m-0">Milly Jackson</h2>
+              <p class="text-primary">Founder</p>
+              <p class="text-black-50">
+                Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget,
+                imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices
+                mauris....
+              </p>
+              <ul
+                class="list-unstyled d-flex justify-content-center bg-primary py-1 gap-4 rounded-top"
+              >
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-google-plus-g"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-tumblr"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <img class="img-fluid" src="imgs/team5.png" alt="team5" />
+            <div class="team-card-content bg-white pt-2 px-5 rounded-bottom">
+              <h2 class="fs-5 m-0">Clark Jackson</h2>
+              <p class="text-primary">Founder</p>
+              <p class="text-black-50">
+                Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget,
+                imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices
+                mauris....
+              </p>
+              <ul
+                class="list-unstyled d-flex justify-content-center bg-primary py-1 gap-4 rounded-top"
+              >
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-google-plus-g"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-tumblr"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <img class="img-fluid" src="imgs/team6.png" alt="team6" />
+            <div class="team-card-content bg-white pt-2 px-5 rounded-bottom">
+              <h2 class="fs-5 m-0">John Jojo</h2>
+              <p class="text-primary">Founder</p>
+              <p class="text-black-50">
+                Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget,
+                imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices
+                mauris....
+              </p>
+              <ul
+                class="list-unstyled d-flex justify-content-center bg-primary py-1 gap-4 rounded-top"
+              >
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-google-plus-g"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-tumblr"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subscribe container-fluid bg-black text-white py-5">
+      <div class="container">
+        <div class="row justify-content-center d-flex py-5">
+          <div class="col-12 col-lg-6 d-flex gap-3 justify-content-center">
+            <i class="fa-regular fa-envelope fs-1"></i>
+            <h1>Subscribe now for news</h1>
+          </div>
+          <div class="col-12 col-lg-6 gap-3 mt-3 mt-lg-0">
+            <form
+              action=""
+              class="d-flex flex-column flex-lg-row justify-content-center"
+            >
+              <div class="col-12 col-lg-8 me-0 me-lg-4">
+                <input
+                  type="email"
+                  placeholder="Input your mail"
+                  class="rounded p-2 me-lg-4 mb-3 col-12"
+                />
+              </div>
+              <div class="col-12 col-lg-3">
+                <button
+                  type="submit"
+                  class="btn btn-primary rounded-pill col-12 py-2"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial container-fluid my-5">
+      <div class="sec-container row pt-5 text-center">
+        <span class="left-span"></span>
+        <span class="right-span"></span>
+        <div class=" container col-8 sec-title">
+          <h1 class="my-4 pb-5">Testimonial</h1>
+        </div>
+      </div>
+      <div class="owl-carousel container">
+        <div>
+          <div class="card mb-3">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-4 d-flex justify-content-center">
+                <img
+                  src="imgs/testi-avtar-1.jpg"
+                  class="img-fluid rounded w-75"
+                  alt="avatar-1"
+                />
+              </div>
+              <div class="col-md-8 py-4">
+                <div class="card-body">
+                  <h5 class="card-title">Micheal Ghobrial</h5>
+                  <p class="card-text text-primary">Software Engineer</p>
+                  <p class="card-text text-black-50 lg-lg">
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate
+                    eget, arcu. In enim justo,ligula. Cum eget dolor Aenean
+                    rhoncus ut, fringilla vel, aliquet nec, imperdiet a,
+                    venenatis vitae, justo. Nullam dictum felis eu pede mollis
+                    pretium.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card mb-3">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-4 d-flex justify-content-center">
+                <img
+                  src="imgs/testi-avtar-2.jpg"
+                  class="img-fluid rounded w-75"
+                  alt="avatar-2"
+                />
+              </div>
+              <div class="col-md-8 py-4">
+                <div class="card-body">
+                  <h5 class="card-title">Micheal Ghobrial</h5>
+                  <p class="card-text text-primary">Software Engineer</p>
+                  <p class="card-text text-black-50 lg-lg">
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate
+                    eget, arcu. In enim justo,ligula. Cum eget dolor Aenean
+                    rhoncus ut, fringilla vel, aliquet nec, imperdiet a,
+                    venenatis vitae, justo. Nullam dictum felis eu pede mollis
+                    pretium.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card mb-3">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-4 d-flex justify-content-center">
+                <img
+                  src="imgs/testi-avtar-3.jpg"
+                  class="img-fluid rounded w-75"
+                  alt="avatar-3"
+                />
+              </div>
+              <div class="col-md-8 py-4">
+                <div class="card-body">
+                  <h5 class="card-title">Micheal Ghobrial</h5>
+                  <p class="card-text text-primary">Software Engineer</p>
+                  <p class="card-text text-black-50 lg-lg">
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate
+                    eget, arcu. In enim justo,ligula. Cum eget dolor Aenean
+                    rhoncus ut, fringilla vel, aliquet nec, imperdiet a,
+                    venenatis vitae, justo. Nullam dictum felis eu pede mollis
+                    pretium.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card mb-3">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-4 d-flex justify-content-center">
+                <img
+                  src="imgs/testi-avtar-5.jpg"
+                  class="img-fluid rounded w-75"
+                  alt="avatar-5"
+                />
+              </div>
+              <div class="col-md-8 py-4">
+                <div class="card-body">
+                  <h5 class="card-title">Micheal Ghobrial</h5>
+                  <p class="card-text text-primary">Software Engineer</p>
+                  <p class="card-text text-black-50 lg-lg">
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate
+                    eget, arcu. In enim justo,ligula. Cum eget dolor Aenean
+                    rhoncus ut, fringilla vel, aliquet nec, imperdiet a,
+                    venenatis vitae, justo. Nullam dictum felis eu pede mollis
+                    pretium.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card mb-3">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-4 d-flex justify-content-center">
+                <img
+                  src="imgs/testi-avtar-4.jpg"
+                  class="img-fluid rounded w-75"
+                  alt="avatar-4"
+                />
+              </div>
+              <div class="col-md-8 py-4">
+                <div class="card-body">
+                  <h5 class="card-title">Micheal Ghobrial</h5>
+                  <p class="card-text text-primary">Software Engineer</p>
+                  <p class="card-text text-black-50 lg-lg">
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate
+                    eget, arcu. In enim justo,ligula. Cum eget dolor Aenean
+                    rhoncus ut, fringilla vel, aliquet nec, imperdiet a,
+                    venenatis vitae, justo. Nullam dictum felis eu pede mollis
+                    pretium.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blog container-fluid">
+      <div class="container-lg py-5 px-0 px-lg-1">
+        <div class="sec-container row pt-5 text-center">
+          <span class="left-span"></span>
+          <span class="right-span"></span>
+          <div class="container col-8 sec-title">
+            <h1 class="mb-3">Latest Blog</h1>
+            <p class="text-black-50">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor. incididunt ut labore et dolore. Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit, sed do eiusm dipisicing
+              elit, sed do eiusmod tempor.
+            </p>
+          </div>
+        </div>
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 py-5 text-light gx-4 gy-4 justify-content-center"
+        >
+          <div class="col">
+            <div class="card">
+              <img
+                src="imgs/gallery2-1-360x260.png"
+                class="card-img-top img-fluid"
+                alt="gallery1"
+              />
+              <div class="card-body">
+                <div class="row">
+                  <div class="card-body-list col-1 bg-black">
+                    <ul
+                      class="list-unstyled d-flex flex-column align-items-center py-3 gap-3"
+                    >
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-tumblr"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body-content col py-4 ps-3 pe-5 text-start">
+                    <h2 class="card-title fs-5">
+                      <a href="" class="text-decoration-none text-black">
+                        Four ways to cheer and plan your self up on Blue
+                      </a>
+                    </h2>
+                    <ul
+                      class="list-unstyled d-flex gap-1 mb-0 mt-3 position-relative"
+                    >
+                      <li class="d-flex gap-1">
+                        <i class="fa-solid fa-person opacity-75"></i>
+                        <p class="text-black-50 pe-2 border-end">
+                          By Micheal Ghobrial
+                        </p>
+                      </li>
+                      <li class="d-flex gap-1 ps-1">
+                        <i class="fa-regular fa-calendar-days opacity-75"></i>
+                        <p class="text-black-50">19 Dec 2018</p>
+                      </li>
+                    </ul>
+                    <p class="card-text text-black-50">
+                      Lorem ipsum dolor sit amet, rcquisc adipiscing elit.
+                      Aenean socada commodo ligauala egets dssdolor....
+                    </p>
+                    <button class="btn bg-transparent px-0">
+                      Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="imgs/bg3-360x260.jpg"
+                class="card-img-top img-fluid"
+                alt="gallery2"
+              />
+              <div class="card-body">
+                <div class="row">
+                  <div class="card-body-list col-1 bg-black">
+                    <ul
+                      class="list-unstyled d-flex flex-column align-items-center py-3 gap-3"
+                    >
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-tumblr"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body-content col py-4 ps-3 pe-5 text-start">
+                    <h2 class="card-title fs-5">
+                      <a href="" class="text-decoration-none text-black">
+                        Four ways to cheer and plan your self up on Blue
+                      </a>
+                    </h2>
+                    <ul
+                      class="list-unstyled d-flex gap-1 mb-0 mt-3 position-relative"
+                    >
+                      <li class="d-flex gap-1">
+                        <i class="fa-solid fa-person opacity-75"></i>
+                        <p class="text-black-50 pe-2 border-end">
+                          By Micheal Ghobrial
+                        </p>
+                      </li>
+                      <li class="d-flex gap-1 ps-1">
+                        <i class="fa-regular fa-calendar-days opacity-75"></i>
+                        <p class="text-black-50">19 Dec 2018</p>
+                      </li>
+                    </ul>
+                    <p class="card-text text-black-50">
+                      Lorem ipsum dolor sit amet, rcquisc adipiscing elit.
+                      Aenean socada commodo ligauala egets dssdolor....
+                    </p>
+                    <button class="btn bg-transparent px-0">
+                      Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="imgs/bg1-360x260.jpg"
+                class="card-img-top img-fluid"
+                alt="gallery1"
+              />
+              <div class="card-body">
+                <div class="row">
+                  <div class="card-body-list col-1 bg-black">
+                    <ul
+                      class="list-unstyled d-flex flex-column align-items-center py-3 gap-3"
+                    >
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa-brands fa-tumblr"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body-content col py-4 ps-3 pe-5 text-start">
+                    <h2 class="card-title fs-5">
+                      <a href="" class="text-decoration-none text-black">
+                        Four ways to cheer and plan your self up on Blue
+                      </a>
+                    </h2>
+                    <ul
+                      class="list-unstyled d-flex gap-1 mb-0 mt-3 position-relative"
+                    >
+                      <li class="d-flex gap-1">
+                        <i class="fa-solid fa-person opacity-75"></i>
+                        <p class="text-black-50 pe-2 border-end">
+                          By Micheal Ghobrial
+                        </p>
+                      </li>
+                      <li class="d-flex gap-1 ps-1">
+                        <i class="fa-regular fa-calendar-days opacity-75"></i>
+                        <p class="text-black-50">19 Dec 2018</p>
+                      </li>
+                    </ul>
+                    <p class="card-text text-black-50">
+                      Lorem ipsum dolor sit amet, rcquisc adipiscing elit.
+                      Aenean socada commodo ligauala egets dssdolor....
+                    </p>
+                    <button class="btn bg-transparent px-0">
+                      Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clients container-fluid mt-4">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-lg-3 d-none d-xl-block">
+            <img src="imgs/partner-slide-man.png" alt="PartnerSlideMan" />
+          </div>
+          <div class="col-12 col-xl-9">
+            <div class="sec-container row text-start sec-title">
+              <span class="right-span"></span>
+              <h1 class="mb-5">Meet Our Clients</h1>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-3">
+              <div class="col">
+                <div
+                  class="border border-secondary rounded d-flex justify-content-center h-100"
+                >
+                  <img
+                    src="imgs/partner-g1.png"
+                    alt="partner1"
+                    class="img-fluid py-4"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="border border-secondary rounded d-flex justify-content-center h-100"
+                >
+                  <img
+                    src="imgs/partner-g2.png"
+                    alt="partner2"
+                    class="img-fluid py-4"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="border border-secondary rounded d-flex justify-content-center h-100"
+                >
+                  <img
+                    src="imgs/partner-g3.png"
+                    alt="partner3"
+                    class="img-fluid py-4"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="border border-secondary rounded d-flex justify-content-center h-100"
+                >
+                  <img
+                    src="imgs/partner-g4.png"
+                    alt="partner4"
+                    class="img-fluid py-4"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="border border-secondary rounded d-flex justify-content-center h-100"
+                >
+                  <img
+                    src="imgs/partner-g5.png"
+                    alt="partner5"
+                    class="img-fluid py-4"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="border border-secondary rounded d-flex justify-content-center h-100"
+                >
+                  <img
+                    src="imgs/partner2.png"
+                    alt="partner6"
+                    class="img-fluid py-4"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="talk-us container-fluid text-light">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-12 col-lg-9">
+            <h2
+              class="position-relative d-flex align-items-center justify-content-center justify-content-lg-between"
+            >
+              <i
+                class="fa-solid fa-phone-volume fs-1 opacity-25 position-absolute d-none d-lg-block"
+              ></i>
+              if you like this grate work ?? for you site...
+            </h2>
+          </div>
+          <div
+            class="col-12 col-lg-3 d-flex justify-content-center mt-2 mt-lg-0"
+          >
+            <a
+              href=""
+              class="btn btn-lg btn-custom text-primary position-relative rounded-pill bg-white"
+              >Purchase Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-us container-fluid bg-black text-light p-4">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-5">
+          <div class="col">
+            <h2 class="mb-4">Contact Info</h2>
+            <ul class="list-unstyled d-flex flex-column">
+              <li class="d-flex gap-2">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>123 Street Market, Life Plaza, New York</p>
+              </li>
+              <li class="d-flex gap-2">
+                <i class="fa-solid fa-phone"></i>
+                <p>+201201605049</p>
+              </li>
+              <li class="d-flex gap-2">
+                <i class="fa-regular fa-envelope"></i>
+                <p>michealghobriall@gmail.com</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h2 class="mb-4">Posts</h2>
+            <ul class="list-unstyled">
+              <li class="d-flex mb-4">
+                <div class="card m-0 bg-transparent">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-md-4 d-flex justify-content-center">
+                      <img
+                        src="imgs/gallery2-1-360x260.png"
+                        class="img-fluid rounded w-75"
+                        alt="avatar-2"
+                      />
+                    </div>
+                    <div class="col-md-8 pt-2">
+                      <div class="card-body text-light">
+                        <p class="m-0">
+                          Four ways to cheer and plan your self up on Blue
+                        </p>
+                        <div class="d-flex gap-2 pt-2">
+                          <i class="fa-regular fa-calendar-days opacity-75"></i>
+                          <p>19 Dec 2018</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="d-flex mb-4">
+                <div class="card m-0 bg-transparent">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-md-4 d-flex justify-content-center">
+                      <img
+                        src="imgs/bg3-360x260.jpg"
+                        class="img-fluid rounded w-75"
+                        alt="avatar-2"
+                      />
+                    </div>
+                    <div class="col-md-8 pt-2">
+                      <div class="card-body text-light">
+                        <p class="m-0">
+                          Four ways to cheer and plan your self up on Blue
+                        </p>
+                        <div class="d-flex gap-2 pt-2">
+                          <i class="fa-regular fa-calendar-days opacity-75"></i>
+                          <p>19 Dec 2018</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h2 class="mb-4">Popular</h2>
+            <ul class="list-unstyled row row-cols-4">
+              <li class="col m-2">
+                <a href="">Accountancy</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Affiliate</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Branding</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Construction</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Design</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Drupal</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Education</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Graphics</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Joomla</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Marketing</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Money</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Tally</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Transform</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Website</a>
+              </li>
+              <li class="col m-2">
+                <a href="">Wordpress</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="container-fluid text-center text-primary bg-black py-4">
+      <a class="text-decoration-none" href=""
+        >© 2025 Developed By Micheal Ghobrial</a
+      >
+    </footer>
     <script src="js/jQuery.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/Scripts.js"></script>

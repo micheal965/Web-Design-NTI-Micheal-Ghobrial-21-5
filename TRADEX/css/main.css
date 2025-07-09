@@ -9,53 +9,77 @@
 }
 body {
     font-family: "Josefin Sans", sans-serif !important;
-    height: 100000px;
 }
 /* Start Global */
 .gears{
     position: absolute;
-    top: 17%;
+    top: 14%;
     left: 0;
     width: 40px;
     height: 40;
     text-align: center;
     align-content: center;
     box-shadow:  0 0 7px rgba(0, 0, 0, 0.477);
-    z-index: 9999;
 }
 .gears:hover .opacity-change {
     opacity: 0.6;
 }
-/* .sec-title h1::before,
+.btn-custom {
+    overflow: hidden;
+}
+.btn-custom::before {
+    content: '';
+    width: 50px;
+    height: 100%;
+    transform: skew(-45deg);
+    position: absolute;
+    top: 0;
+    left: -60px;
+    background-color: rgba(12, 60, 215, 0.272);
+    transition: 0.8s;
+}
+.btn-custom:hover::before{
+    left:calc(100% + 60px);
+}
+
+.sec-container {
+    position: relative;
+}
+.sec-title h1::before,
 .sec-title h1::after {
     content: '';
     background-color: var(--blue);
     position: absolute;
-    width: 35px;
+    width: 5%;
     height: 2px;
-    top: 50%;
-} 
+    bottom: 55%;
+    display: none;
+ } 
 .sec-title h1::before {
-    left:50px;
+    left:36%;
 }
 .sec-title h1::after {
-    right:50px;
-} */
+    right:36%;
+} 
 
-/* .sec-title span {
+.left-span, 
+.right-span{
     position: absolute;
-    background-color: blue;
-    width: 70px;
+    background-color: var(--blue);
+    width: 3%;
     height: 2px;
-    top: 22%;
+    bottom: 58%;
+    z-index:1;
+    display: none;
+
 }
-.sec-title .row .left-span{
-    left: 38%;
+.left-span{
+    left: 38% ;
 }
-.sec-title .row .right-span {
-    right: 38%;
-} */
- 
+.right-span {
+    right: 38% ;
+} 
+
 /* End Global */
 
 /* Start header */
@@ -139,6 +163,19 @@ header p {
     background-color:#191819f7;
     z-index: 1;
 }
+.services .sec-title h1::before {
+    left:33%;
+}
+.services .sec-title h1::after {
+    right:33%;
+} 
+.services  .left-span{
+    left: 62%;
+}
+.services .right-span{
+    right: 62%;
+}
+
 .services .col {
     overflow: hidden;
 }
@@ -160,12 +197,280 @@ header p {
 }
 /* End Services */
 
+/* Start Work */
+.work .sec-title h1::before,
+.work .sec-title h1::after {
+    bottom: 87%;
+ } 
+.work  .left-span, 
+.work .right-span{
+    bottom: 89%;
+}
+
+.work .breadcrumb li a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+}
+.work .breadcrumb li:not(:first-child) a{
+    color: black;
+}
+.work .breadcrumb li a:hover {
+    color: var(--blue);
+}
+.work .row:nth-child(2) .col {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.work .row:nth-child(2) .col span {
+    transition: 0.4s ease;
+}
+.work .row:nth-child(2) .col:hover span{
+    transform: translateY(0);
+}
+.work .row .col img {
+    transition: 0.3s ease;
+}
+.work .row .col:hover img {
+    box-shadow: 0 0 10px rgb(146, 145, 145);
+}
+.work .row:nth-child(2) .col span {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--blue);
+    width: 90%;
+    border-radius:5px;
+    padding: 5px 30px;
+    color: white;
+    transform: translateY(100%);
+}
+/* End Work */
+
+/* Start Testimonial */
+
+.testimonial .sec-title h1::before ,
+.testimonial .sec-title h1::after {
+    top:52%;
+} 
+.testimonial .sec-title h1::before {
+    left: 38%;
+}
+.testimonial .sec-title h1::after {
+    right: 38%;
+}
+.testimonial  .left-span,
+.testimonial .right-span {
+    top: 49%;
+}
+.testimonial .left-span {
+    left: 40%;
+}
+.testimonial .right-span {
+    right: 40%;
+}
+.testimonial .owl-nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.testimonial .owl-nav svg {
+    transition: 0.3s ease;
+}
+.testimonial .owl-nav svg:hover {
+    background-color: black !important;
+}
+/* End Testimonial */
+
+/* Start Blog */
+.blog {
+    background-color: var(--section-color);
+}
+
+
+.card {
+    --bs-card-spacer-y: 0rem;
+    --bs-card-spacer-x: 0.75rem;
+    box-shadow: 0 0 10px rgb(178, 178, 178);
+}
+
+.card:hover .card-body-list{
+    background-color: var(--blue) !important;
+}
+.card:hover .card-body-content ul::after {
+    width: 100%;
+}
+.card:hover .card-body-content h2 a{
+    color: var(--blue) !important;
+}
+.card-body-content h2 a,
+.card .card-body-list {
+    transition: background-color 0.4s ease;
+}
+.card .card-body-list {
+    border-bottom-left-radius: 0.2rem;
+
+}
+.card .card-body-list li a{
+    color: white;
+}
+.card .card-body-content ul::after  {
+    content: '';
+    position: absolute;
+    bottom: 18%;
+    height: 2px ;
+    width: 25%;
+    transition: 0.4s ease;
+    background-color: var(--blue);
+}
+.card .card-body-content ul li:hover *{
+    color: var(--blue) !important;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+.card .card-body-content ul li p{
+    font-size: 13px;
+}
+.card .card-body-content button svg {
+    transition: 0.3s ease;
+}
+.card .card-body-content button:hover svg {
+    padding-left: 5px;
+}
+/* End Blog */
+
+/* Start Clients */
+.clients .sec-title h1::before {
+    display: none;
+}
+.clients .sec-title h1::after {
+    top:30%;
+    right:58%;
+    width: 7%;
+} 
+.clients .right-span {
+    top: 24%;
+    right: 61%;
+    width: 4%;
+
+}
+/* End Clients */
+
+/* Start fluid-image-section */
+.fluid-image-section {
+    background-image: url('/imgs/ecommerce-cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+/* End fluid-image-section */
+
+/* Start team */
+.team {
+    background-color: var(--section-color);
+}
+.team .sec-title h1::before {
+    left:30%;
+}
+.team .sec-title h1::after {
+    right:30%;
+} 
+.team  .left-span{
+    left: 32%;
+}
+.team .right-span{
+    right: 32%;
+}
+
+.team .row:nth-child(2) .col {
+    overflow: hidden;
+    position: relative;
+}
+.team .team-card-content {
+    position: absolute;
+    height: 75px;
+    transition: 0.4s ease;
+    top: 84%;
+}
+.team .team-card-content:hover {
+    height: 100%;
+    top: 48%;
+}
+.team .team-card-content:hover p:nth-child(2) {
+    border: 0;
+}
+.team .team-card-content p:nth-child(2) {
+    border-bottom: 2px solid black;
+}
+.team .team-card-content ul li a {
+    color: white;
+    transition: 0.4s ease;
+}
+.team .team-card-content ul li a:hover {
+    color: black;
+}
+/* End team */
+
+/* Start Subscribe */
+.subscribe input:focus {
+    outline: none;
+}
+/* End Subscribe */
+
+/* Start talk-us */
+.talk-us  {
+    background-color: var(--blue);
+}
+.talk-us svg{
+    font-size: 6rem !important;
+    transform: translateX(-50%);
+}
+
+/* End talk-us */
+
+/* Start Contact */
+.contact-us .col:nth-child(3) ul li {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+.contact-us .col:nth-child(3) ul li:hover {
+    background-color: var(--blue);
+    transition: background-color 0.4s ease;
+}
+.contact-us .col:nth-child(3) ul li:hover a{
+    color: white;
+    transition: color 0.4s ease;
+}
+.contact-us .col:nth-child(3) ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.5rem;
+
+}
+/* End Contact */
+
+/* Start footer*/
+footer  {
+    box-shadow: 0 -6px 10px rgb(59, 59, 59);
+}
+/* End footer*/
+
+
+
+
 /* Responsive Styles */
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
+    .contact-us .col:nth-child(3) ul li a {
+        font-size: 0.7rem;
+    }
 
- }
+    
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
@@ -175,19 +480,30 @@ header p {
         max-width: 400px;
 
         }
- }
+        .contact-us .col:nth-child(3) ul li a {
+            font-size: 0.8rem;
+        }
+}
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
+    .contact-us .col:nth-child(3) ul li a {
+        font-size: 0.7rem;
+    }
 
- }
+}
 
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
+    .contact-us .col:nth-child(3) ul li a {
+        font-size: 0.9rem;
+    }
 
- }
-
+}
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { 
-
+    .sec-title h1::before,
+    .sec-title h1::after,
+    .left-span, 
+    .right-span{
+        display: block;
+    }
  }
